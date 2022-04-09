@@ -36,7 +36,7 @@ const SocialIcons = (props) => {
                 transition={{ type: 'spring', duration: 1, delay: 1 }}
             >
 
-                <NavLink style={{ color: 'white' }} target="_blank" to={{ pathname: "https://github.com/codebucks27" }}>
+                <NavLink style={{ color: 'white' }} target="_blank" to={{ pathname: "https://github.com/baoduong1011" }}>
                     <Github width={25} height={25} fill='currentColor' />
                 </NavLink>
             </motion.div>
@@ -47,7 +47,7 @@ const SocialIcons = (props) => {
                 transition={{ type: 'spring', duration: 1, delay: 1.2 }}
             >
 
-                <NavLink style={{ color: 'white' }} target="_blank" to={{ pathname: "https://github.com/codebucks27" }}>
+                <NavLink style={{ color: 'white' }} target="_blank" to={{ pathname: "https://www.facebook.com/profile.php?id=100009399229667" }}>
                     <Facebook width={25} height={25} fill='currentColor' />
                 </NavLink>
             </motion.div>
@@ -57,7 +57,7 @@ const SocialIcons = (props) => {
                 animate={{ scale: [0, 1, 1.5, 1] }}
                 transition={{ type: 'spring', duration: 1, delay: 1.4 }}
             >
-                <NavLink style={{ color: 'white' }} target="_blank" to={{ pathname: "https://github.com/codebucks27" }}>
+                <NavLink style={{ color: 'white' }} target="_blank" to={{ pathname: "https://www.instagram.com/bd.10.11/" }}>
                     <Twitter width={25} height={25} fill='currentColor' />
                 </NavLink>
             </motion.div>
@@ -67,7 +67,7 @@ const SocialIcons = (props) => {
                 animate={{ scale: [0, 1, 1.5, 1] }}
                 transition={{ type: 'spring', duration: 1, delay: 1.6 }}
             >
-                <NavLink style={{ color: 'white' }} target="_blank" to={{ pathname: "https://github.com/codebucks27" }}>
+                <NavLink style={{ color: 'white' }}  to='/'>
                     <YouTube width={25} height={25} fill='currentColor' />
                 </NavLink>
             </motion.div>
