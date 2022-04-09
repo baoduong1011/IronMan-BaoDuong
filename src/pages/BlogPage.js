@@ -52,10 +52,10 @@ const Grid = styled.div`
 
 const container = {
 
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, x: 600 },
   show: {
       opacity: 1,
-
+      x : 0,
       transition: {
           staggerChildren: 0.5,
           duration: 0.5,
@@ -64,6 +64,11 @@ const container = {
 
 }
 
+const variants = {
+  visible: { opacity: 1, x: 0 },
+  hidden: { opacity: 0, x: 600 },
+  
+}
 
 
 

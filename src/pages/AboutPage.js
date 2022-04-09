@@ -9,8 +9,9 @@ import astronaut from '../assets/images/spaceman.png'
 import ParticleComponent from '../components/ParticleComponent';
 import {WOW} from 'wowjs';
 import 'animate.css';
+import { motion } from 'framer-motion'
 
-const Box = styled.div`
+const Box = styled(motion.div)`
 background-color: ${props => props.theme.body};
 width: 100vw;
 height:100vh;
@@ -75,6 +76,21 @@ const Main = styled.div`
   font-style: italic;
 `
 
+const container = {
+
+  hidden: { opacity: 0 },
+  show: {
+      opacity: 1,
+
+      transition: {
+          staggerChildren: 0.5,
+          duration: 0.5,
+         
+      }
+  }
+
+}
+
 const AboutPage = () => {
 
   useEffect(() => {
@@ -87,12 +103,26 @@ const AboutPage = () => {
     wow.init();
   }, []);
 
+  const variants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 600 },
+    transition: 0.5
+  }
+
   return (
 
     <ThemeProvider  theme={DarkTheme}>
      
 
-      <Box className={``} >
+      <Box className={``}
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{duration: 0.5}}
+      exit= {{
+        opacity: 0, y: 600
+      }}
+      >
         <LogoComponent />
         <SocialIcons />
         <ParticleComponent theme='dark' />
@@ -106,7 +136,7 @@ const AboutPage = () => {
 
        
         <Main  className='animate__animated animate__flash'>
-          I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
+          I'm a front-end developer located in Ben Tre City. I love to create simple yet beautiful websites with great user experience.
           <br /> <br />
           I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
           <br /> <br />

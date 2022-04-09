@@ -11,7 +11,7 @@ import Card from '../components/Card';
 import BigTitle from '../components/BigTitle';
 import { PowerBtn, PowerIronMan } from '../components/AllSvgs';
 import ParticleComponent from '../components/ParticleComponent';
-const Box = styled.div`
+const Box = styled(motion.div)`
 background-color: ${props => props.theme.body};
 height:400vh;
 position: relative;
@@ -83,9 +83,24 @@ const WorkPage = () => {
     }
   }, [])
 
+  const variants = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -600 },
+    
+  }
+  
+
   return (
     <ThemeProvider theme={DarkTheme}>
-      <Box>
+      <Box
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{duration: 0.5}}
+      exit= {{
+        opacity: 0, x: -600
+      }}
+      >
         <ParticleComponent theme='dark' />
         <LogoComponent theme='dark' />
         <SocialIcons theme='dark' />

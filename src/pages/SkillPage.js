@@ -7,8 +7,9 @@ import LogoComponent from '../components/LogoComponent';
 import SocialIcons from '../components/SocialIcons';
 import ParticleComponent from '../components/ParticleComponent';
 import BigTitle from '../components/BigTitle';
+import { motion } from 'framer-motion';
 
-const Box = styled.div`
+const Box = styled(motion.div)`
 background-color: ${props => props.theme.body};
 width: 100vw;
 height:100vh;
@@ -80,10 +81,24 @@ ul,p{
 }
 `
 
+const variants = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 600 },
+  
+}
+
 const SkillPage = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
-      <Box>
+      <Box
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      transition={{duration: 0.5}}
+      exit={{
+        opacity: 0, y: 600
+      }}
+      >
 
         <LogoComponent theme='dark' />
         <SocialIcons theme='dark' />
