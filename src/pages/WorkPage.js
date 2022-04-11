@@ -11,33 +11,34 @@ import Card from '../components/Card';
 import BigTitle from '../components/BigTitle';
 import { PowerBtn, PowerIronMan } from '../components/AllSvgs';
 import ParticleComponent from '../components/ParticleComponent';
+
 const Box = styled(motion.div)`
-background-color: ${props => props.theme.body};
-height:400vh;
-position: relative;
-display: flex;
-align-items: center;
+  background-color: ${props => props.theme.body};
+  height:400vh;
+  position: relative;
+  display: flex;
+  align-items: center;
 
 
 `
 
 const Main = styled(motion.ul)`
-position: fixed;
-top: 12rem;
-left:calc(10rem + 15vw);
-height: 40vh;
-display: flex;
+  position: fixed;
+  top: 12rem;
+  left:calc(10rem + 15vw);
+  height: 40vh;
+  display: flex;
 
-color:white;
+  color:white;
 `
 const Rotate = styled.span`
-display:block;
-position: fixed;
-right:1rem;
-bottom: 1rem;
-width: 80px;
-height: 80px;
-z-index:1;
+  display:block;
+  position: fixed;
+  right:1rem;
+  bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  z-index:1;
 `
 
 

@@ -28,12 +28,6 @@ const CenterVideo = styled.video`
     top: 0;
     left: 0;
     transform:translateX(-50%,-50%);
-
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
     pointer-events:none;
 `
 
@@ -41,12 +35,12 @@ const Center = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10rem;
+    padding-top: 8rem;
 `
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
+    grid-template-columns: repeat(3, minmax(calc(10rem + 15vw), 1fr));
     grid-gap: calc(1rem + 2vw);
 `
 
@@ -54,33 +48,29 @@ const container = {
 
   hidden: { opacity: 0, x: 600 },
   show: {
-      opacity: 1,
-      x : 0,
-      transition: {
-          staggerChildren: 0.5,
-          duration: 0.5,
-      }
+    opacity: 1,
+    x: 0,
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5,
+    }
   }
 
 }
 
-const variants = {
-  visible: { opacity: 1, x: 0 },
-  hidden: { opacity: 0, x: 600 },
-  
-}
+
 
 
 
 const BlogPage = () => {
   return (
     <MainContainer
-    
+
       variants={container}
       initial='hidden'
       animate='show'
       exit={{
-          opacity: 0, transition: { duration: 0.5 }
+        opacity: 0, transition: { duration: 0.5 }
       }}
 
     >
